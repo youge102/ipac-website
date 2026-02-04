@@ -11,8 +11,11 @@ import { Card, CardContent } from "@/components/ui/card";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ArrowRight, CheckCircle, Building2, Hammer, Zap, Wrench } from "lucide-react";
+import { useAuth } from "@/_core/hooks/useAuth";
 
 export default function Home() {
+  const { user, isAuthenticated } = useAuth();
+
   const services = [
     {
       icon: Building2,
